@@ -42,6 +42,21 @@ const PurchaseSummary = (props) => <div className='persistent-order-summary'>
   <div className='item-b'>$95.00</div>
   <div className='item-c'>Shipping</div>
   <div className='item-d'>Free</div>
+  <div className='item-e'>
+    <span >
+      <span>Est. taxes &amp; fees</span>
+    </span>
+  </div>
+  <div className='item-f'>$9.50</div>
+<div className='item-base' >(Based on 98116)</div>
+<div className='item-price' >Est. total
+<span className='item-price-number'>$104.50</span> 
+</div>
+
+<div className='item-detail'>
+  <a href='#'>See item details</a>
+</div>
+
 </div>
 
 const App = connect(

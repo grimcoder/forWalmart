@@ -4,10 +4,10 @@ button,html,input,select,textarea {
 }
 
 html{
-    background-color: lemonchiffon;display: flex;justify-content: center;align-content: center;
+    /* background-color: lemonchiffon; */
 }
 
-body{width: 100%; height: 100% }
+body{width: 100%; height: 100% ;display: flex;justify-content: center;align-content: center;}
 
 .persistent-order-summary{
     display: grid ;
@@ -17,11 +17,12 @@ body{width: 100%; height: 100% }
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
-
-    grid-template-columns: auto auto;
-    grid-template-rows: 27px 27px;
+    line-height: 21px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     font-size: 14px;
-
+    gap: 6px;
+    font-family: BogleWeb;
 }
 
 
@@ -53,7 +54,7 @@ body{width: 100%; height: 100% }
     grid-column-end: 1;
     grid-row-start: 2;
     grid-row-end: 2;
-    font-family: BogleWeb;
+    
   }
 
 
@@ -68,7 +69,72 @@ body{width: 100%; height: 100% }
   }
 
 
+  .item-e {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    font-family: BogleWeb;
+  }
 
+  .item-f {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    align-self: top;
+    justify-self: right;
+    font-family: BogleWebBold;
+  }
+
+
+  .item-f {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    align-self: top;
+    justify-self: right;
+    font-family: BogleWebBold;
+  }
+
+  .item-base {
+    grid-column-start: span 2;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    align-self: top;
+    justify-self: left;
+    font-family: BogleWeb;
+    margin-top: -10px;
+  }
+
+  .item-price{
+    grid-column-start: span 2;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    align-self: top;
+    justify-self: left;
+    font-family: BogleWebBold;
+    padding-top: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    border-top-width: 1px;
+    border-color: #aaa;
+    border-top-style: solid;
+  }
+
+
+  .item-price-number{
+    font-size: 21px;
+  }
+
+  .item-detail {
+    grid-column-start: span 2;
+      grid-row: 6;
+  }
+
+  .item-detail a {color: black}
 
   @font-face { font-family: "BogleWebBold";
     src: url("https://i5.walmartimages.com/dfw/63fd9f59-fbd2/ce71da87-048e-4bff-81c1-663f19b9a60d/v1/BogleWeb-Bold.eot");
