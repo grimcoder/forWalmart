@@ -37,11 +37,10 @@ let store = createStore(rootReducer, initialState);
 const increment = () => ({ type: INCREMENT_COUNTER })
 const decrement = () => ({ type: DECREMENT_COUNTER })
 
-const PurchaseSummary = (props) => <div className='persistent-order-summary'>
-  <div className='item-a'>Subtotal</div>
-  <div className='item-b'>$95.00</div>
-  <div className='item-c'>Shipping</div>
-  <div className='item-d'>Free</div>
+const Board = (props) => <div>
+  <div>Counter: {props.counter}</div>
+  <button onClick={props.increment}>Increment</button>
+  <button onClick={props.decrement}>Decrement</button>
 </div>
 
 const App = connect(
@@ -55,11 +54,11 @@ const App = connect(
       },
       dispatch
     )
-)(PurchaseSummary)
+)(Board)
 
 render(
   <Provider store={store}>
-    <App className='appaa' />
+    <App className='app' />
   </Provider>,
   target
 )
